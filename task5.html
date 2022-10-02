@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/bootstrap-4.3.1.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<title>Picture View</title>
+</head>
+<body>
+
+<div class="container">
+	<div class="row card-list">
+		<div class="col-lg-4 col-md-6 col-sm-12">
+			<div class="card">
+				<img src="images/image1.webp" alt="card-picture">
+				<div class="card-body">
+					<h5 class="card-title">标题</h5>
+					<p class="card-text">文字</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 col-sm-12">
+			<div class="card">
+				<img src="images/ace_image1.jpg" alt="card-picture">
+				<div class="card-body">
+					<h5 class="card-title">标题</h5>
+					<p class="card-text">文字</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 col-sm-12">
+			<div class="card">
+				<img src="images/ace_image2.jpg" alt="card-picture">
+				<div class="card-body">
+					<h5 class="card-title">标题</h5>
+					<p class="card-text">文字</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 col-sm-12">
+			<div class="card">
+				<img src="images/ace_image3.jpg" alt="card-picture">
+				<div class="card-body">
+					<h5 class="card-title">标题</h5>
+					<p class="card-text">文字</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 col-sm-12">
+			<div class="card">
+				<img src="images/image5.webp" alt="card-picture">
+				<div class="card-body">
+					<h5 class="card-title">标题</h5>
+					<p class="card-text">文字</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 col-sm-12">
+			<div class="card">
+				<img src="images/ace_image5.jpg" alt="card-picture">
+				<div class="card-body">
+					<h5 class="card-title">标题</h5>
+					<p class="card-text">文字</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--<div class="modal" tabindex="-1">-->
+<!--	<div class="modal-dialog">-->
+<!--		<div class="modal-content">-->
+<!--			<div class="modal-header">-->
+<!--				<h5 class="modal-title">Modal title</h5>-->
+<!--				<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--					<span aria-hidden="true">&times;</span>-->
+<!--				</button>-->
+<!--			</div>-->
+<!--			<div class="modal-body">-->
+<!--				<p>Modal body text goes here.</p>-->
+<!--			</div>-->
+<!--			<div class="modal-footer">-->
+<!--				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--				<button type="button" class="btn btn-primary">Save changes</button>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
+<!-- Vertically centered modal -->
+<div id="picture-show-modal" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body mx-auto overflow-hidden p-0">
+				<img data-scale="1" class="w-100" src="images/image1.webp" alt="image">
+			</div>
+			<div class="modal-footer d-flex justify-content-center">
+				<div onclick="pictureScale(1.1)">放大</div>
+				<div onclick="pictureScale(0.9)">缩小</div>
+				<div>下载</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.3.1.js"></script>
+<script src="js/script.js"></script>
+<!--
+
+<script>
+	var lastX = null,
+		lastY = null;
+	window.onmousemove = function(event){
+		var curX = event.clientX,
+			curY = event.clientY,
+			direction = '';
+// console.info(event);
+// console.info(event.clientX);
+// console.info(event.clientY);
+// 初始化坐标
+		if(lastX == null || lastY == null){
+			lastX = curX;
+			lastY = curY;
+			return ;
+		}
+		if(curX > lastX){
+			direction += 'X右,';
+		}else if(curX < lastX){
+			direction += 'X左,';
+		}else{
+			direction += 'X居中,';
+		}
+		if(curY > lastY){
+			direction += 'Y上';
+		}else if(curY < lastY){
+			direction += 'Y下';
+		}else{
+			direction += 'Y居中';
+		}
+		lastX = curX;
+		lastY = curY;
+		console.info(direction);
+		document.body.innerText = direction;
+	}
+</script>
+
+-->
+</body>
+</html>
